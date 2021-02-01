@@ -29,6 +29,7 @@ import storageUtils from '../../utils/storageUtils'
         }
         // (nameList?: NamePath[]) => Promise
         onFinish = (value) => {
+            // console.log( this.formRef.current.getFieldsValue())
             this.formRef.current.validateFields().then(async values=> {
                 const {username, password} = values
                 const result = await reqLogin(username, password)
